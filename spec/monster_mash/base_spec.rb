@@ -236,7 +236,7 @@ describe MonsterMash::Base do
           })
           cache_timeout 999999
           handler do |response|
-            json = JSON.parse(response.body)
+            json = MultiJson.decode(response.body)
             json['responseData']['results'].map do |result|
               result['url']
             end

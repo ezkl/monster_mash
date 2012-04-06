@@ -3,5 +3,6 @@ source :rubygems
 gemspec
 
 group :test do
-  gem 'json'
+  gem 'multi_json'
+  gem 'yajl-ruby', :require => nil
 end

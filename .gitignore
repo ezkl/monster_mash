@@ -23,3 +23,6 @@ README.markdown.html
 
 ## RVM
 .rvmrc
+
+## Bundler
+Gemfile.lock

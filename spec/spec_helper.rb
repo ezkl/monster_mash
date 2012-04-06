@@ -1,9 +1,6 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'monster_mash'
-require 'rspec'
-require 'rspec/autorun'
-require 'json'
+require File.expand_path(File.dirname(__FILE__) + '/../lib/monster_mash')
+
+require 'multi_json'
 require 'vcr'
 
 VCR.configure do |c|
