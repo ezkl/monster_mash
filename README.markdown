@@ -46,7 +46,7 @@ Example: Google JSON search
                'q' => query,
                'rsz' => 'large'
         handler do |response|
-          json = JSON.parse(response.body)
+          json = MultiJson.decode(response.body)
 
           # returns results
           json['responseData']['results']
@@ -100,7 +100,7 @@ monster_mash will correctly delegate method calls from your handler block to you
                'q' => query,
                'rsz' => 'large'
         handler do |response|
-          json = JSON.parse(response.body)
+          json = MultiJson.decode(response.body)
 
           # Calls the correct method on GoogleJson.
           parse_results(json)
